@@ -1,0 +1,32 @@
+{
+  "name": "desktop-clippy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "nw app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "clippy.js": "git+https://github.com/adam-lynch/clippy.js.git#pkg",
+    "desktop-clippy": "git+https://github.com/adam-lynch/clippy.js.git#pkg",
+    "jquery": "^2.1.4"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.9.3",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-load-plugins": "^1.0.0-rc.1"
+  },
+  "window": {
+    "frame": false,
+    "toolbar": false,
+    "width": 200,
+    "height": 200,
+    "transparent": true,
+    "show_in_taskbar": false,
+    "always-on-top": true
+  }
+}

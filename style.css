@@ -1,0 +1,17 @@
+body {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    -webkit-app-region: drag;
+    -webkit-user-select: none;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.clippy {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
