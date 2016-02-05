@@ -23,8 +23,8 @@
   "window": {
     "frame": false,
     "toolbar": false,
-    "width": 200,
-    "height": 200,
+    "width": 300,
+    "height": 300,
     "transparent": true,
     "show_in_taskbar": false,
     "always-on-top": true
