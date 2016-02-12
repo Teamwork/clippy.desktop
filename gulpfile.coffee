@@ -29,7 +29,25 @@ gulp.task 'third-party-scripts', (done) ->
     .on 'end', done
     return
 
-gulp.task 'release', ['compile'], ->
+
+zip = (directoryName, callback) ->
+    gulp.src "./dist/clippy.desktop/#{directoryName}/**/*"
+        .pipe $.zip "clippy.desktop-#{directoryName}.zip"
+        .pipe gulp.dest './dist'
+        .on 'end', callback
+    return
+
+
+gulp.task 'release', ['zip-win32', 'zip-win64', 'zip-osx32', 'zip-osx64', 'zip-linux32', 'zip-linux64']
+
+gulp.task 'zip-win32', ['build'], (done) -> zip 'win32', done
+gulp.task 'zip-win64', ['build'], (done) -> zip 'win64', done
+gulp.task 'zip-osx32', ['build'], (done) -> zip 'osx32', done
+gulp.task 'zip-osx64', ['build'], (done) -> zip 'osx64', done
+gulp.task 'zip-linux32', ['build'], (done) -> zip 'linux32', done
+gulp.task 'zip-linux64', ['build'], (done) -> zip 'linux64', done
+
+gulp.task 'build', ['compile'], ->
     return new NwBuilder(
         appName: 'clippy.desktop'
         files: ['./app/**/*'],

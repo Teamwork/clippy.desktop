@@ -34,4 +34,4 @@ node_modules
 
 app
 cache
-dist
+dist/clippy.desktop
