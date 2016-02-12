@@ -31,6 +31,7 @@ gulp.task 'third-party-scripts', (done) ->
 
 gulp.task 'release', ['compile'], ->
     return new NwBuilder(
+        appName: 'clippy.desktop'
         files: ['./app/**/*'],
         platforms: ['osx32', 'osx64', 'win32', 'win64', 'linux32', 'linux64'],
         version: '0.12.3',

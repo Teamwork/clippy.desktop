@@ -1,5 +1,5 @@
 {
-  "name": "desktop-clippy",
+  "name": "clippy.desktop",
   "version": "1.0.0",
   "description": "",
   "main": "index.html",
@@ -26,7 +26,6 @@
     "width": 300,
     "height": 300,
     "transparent": true,
-    "show_in_taskbar": false,
     "always-on-top": true
   }
 }
