@@ -1,5 +1,6 @@
-gulp = require 'gulp'
-$ = require('gulp-load-plugins')()
+gulp        = require 'gulp'
+$           = require('gulp-load-plugins')()
+NwBuilder   = require 'node-webkit-builder'
 
 appDirectory = './app'
 
@@ -27,3 +28,11 @@ gulp.task 'third-party-scripts', (done) ->
         .pipe gulp.dest appDirectory
     .on 'end', done
     return
+
+gulp.task 'release', ->
+    return new NwBuilder(
+        files: ['./**/*', '!./dist/**/*'],
+        platforms: ['osx32', 'osx64', 'win32', 'win64', 'linux32', 'linux64'],
+        version: '0.12.3',
+        buildDir: 'dist'
+    ).build()

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "start": "nw app",
+    "start": "gulp && nw app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -17,7 +17,8 @@
     "coffee-script": "^1.9.3",
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
-    "gulp-load-plugins": "^1.0.0-rc.1"
+    "gulp-load-plugins": "^1.0.0-rc.1",
+    "node-webkit-builder": "~1.0.13"
   },
   "window": {
     "frame": false,
