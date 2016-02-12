@@ -1,7 +1,7 @@
 var gui = require('nw.gui');
 var win = gui.Window.get();
 var isMac = require('os').platform() === 'darwin';
-win.showDevTools(); // uncomment if you want to debug
+// win.showDevTools(); // uncomment if you want to debug
 
 if(isMac) {
     document.title = '\u3000'; // to get around https://github.com/nwjs/nw.js/issues/3645

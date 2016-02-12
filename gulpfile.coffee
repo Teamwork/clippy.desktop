@@ -29,9 +29,9 @@ gulp.task 'third-party-scripts', (done) ->
     .on 'end', done
     return
 
-gulp.task 'release', ->
+gulp.task 'release', ['compile'], ->
     return new NwBuilder(
-        files: ['./**/*', '!./dist/**/*'],
+        files: ['./app/**/*'],
         platforms: ['osx32', 'osx64', 'win32', 'win64', 'linux32', 'linux64'],
         version: '0.12.3',
         buildDir: 'dist'
